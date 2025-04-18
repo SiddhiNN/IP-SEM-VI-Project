@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.language-selector {
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flashcard:hover {
+    transform: translateY(-5px);
+}
+
+.word {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.translation {
+    font-size: 18px;
+    color: #666;
+    display: none;
+}
+
+.progress {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.next-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.next-btn:hover {
+    background-color: #45a049;
+}
+
+.reveal-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.reveal-btn:hover {
+    background-color: #0b7dda;
+}
+
+.test-btn {
+    background-color: #FF9800;
+    color: white;
+}
+
+.test-btn:hover {
+    background-color: #e68900;
+}
+
+.stats,
+.scoreboard,
+.feedback {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

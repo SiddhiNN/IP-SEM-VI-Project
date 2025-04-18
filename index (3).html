@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Learner</h1>
+
+        <div class="language-selector">
+            <label for="language">Select Language: </label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="italian">Italian</option>
+            </select>
+        </div>
+
+        <div class="flashcard" id="flashcard" onclick="toggleTranslation()">
+            <div class="word" id="word">Click Next to Start</div>
+            <div class="translation" id="translation"></div>
+        </div>
+
+        <div id="test-section" style="display: none;">
+            <input type="text" id="answerInput" placeholder="Type the translation" />
+            <button onclick="submitAnswer()">Submit</button>
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="buttons">
+            <button class="reveal-btn" onclick="toggleTranslation()">Reveal</button>
+            <button class="next-btn" onclick="nextWord()">Next Word</button>
+            <button onclick="toggleTestMode()" class="test-btn">Toggle Test Mode</button>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="stats" id="stats">
+            Words learned: 0/0
+        </div>
+        <div class="scoreboard" id="scoreboard">
+            Score: 0 correct, 0 incorrect
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
